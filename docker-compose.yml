@@ -1,0 +1,11 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  text-to-epub:
+    build: .
+    volumes:
+      - ./data:/data
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    # El comando se pasará al ejecutar docker-compose run
